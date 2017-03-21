@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jspark.android.sharedpreference.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Settings"
+            android:textSize="30sp"/>
+        <EditText
+            android:id="@+id/editMail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textSetting"
+            android:inputType="textEmailAddress"
+            android:hint="example@example.com"/>
+        <Switch
+            android:id="@+id/swShuffle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editMail"
+            android:text="Shuffle  "/>
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Save"
+            android:onClick="saveSetting"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relative2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFFFF">
+        <TextView
+            android:id="@+id/textHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Help"
+            android:textSize="30sp"/>
+
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:text="Close"
+            android:onClick="closeHelp"/>
+
+        <TextView
+            android:id="@+id/textHelpContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:text="Help me Help me Bla Bla"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/textHelp"
+            android:layout_above="@id/btnClose"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="30dp"
+            />
+
+    </RelativeLayout>
+
+</FrameLayout>
